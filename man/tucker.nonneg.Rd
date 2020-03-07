@@ -4,11 +4,11 @@
 \alias{tucker.nonneg}
 \title{sparse (semi-)nonnegative Tucker decomposition}
 \usage{
-tucker.nonneg(tnsr, ranks, core_nonneg = TRUE, tol = 1e-04, hosvd = FALSE,
-  max_iter = 500, max_time = 0, lambda = rep.int(0, length(ranks) + 1),
-  L_min = 1, rw = 0.9999, bound = Inf, U0 = NULL, Z0 = NULL,
-  verbose = FALSE, unfold_tnsr = length(dim(tnsr)) * prod(dim(tnsr)) <
-  4000^2)
+tucker.nonneg(tnsr, ranks, core_nonneg = TRUE, tol = 1e-04,
+  hosvd = FALSE, max_iter = 500, max_time = 0, lambda = rep.int(0,
+  length(ranks) + 1), L_min = 1, rw = 0.9999, bound = Inf,
+  U0 = NULL, Z0 = NULL, verbose = FALSE,
+  unfold_tnsr = length(dim(tnsr)) * prod(dim(tnsr)) < 4000^2)
 }
 \arguments{
 \item{tnsr}{nonnegative tensor with \code{K} modes}
@@ -80,4 +80,3 @@ Y. Xu, "Alternating proximal gradient method for sparse nonnegative Tucker decom
 
 \url{http://www.caam.rice.edu/~optimization/bcu/}
 }
-

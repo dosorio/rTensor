@@ -36,8 +36,8 @@ Uses the Alternating Least Squares (ALS) estimation procedure. A progress bar is
 The length of \code{ranks} must match \code{tnsr@num_modes-1}.
 }
 \examples{
-tnsr <-rand_tensor(c(100,10,10))
-mpcaD <- mpca(tnsr,ranks=c(30,5))
+subject <- faces_tnsr[,,21,]
+mpcaD <- mpca(subject,ranks=c(10,10))
 mpcaD$conv
 mpcaD$norm_percent
 plot(mpcaD$all_resids)
@@ -48,4 +48,3 @@ H. Lu, K. Plataniotis, A. Venetsanopoulos, "Mpca: Multilinear principal componen
 \seealso{
 \code{\link{tucker}}, \code{\link{hosvd}}
 }
-
